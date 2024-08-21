@@ -21,7 +21,6 @@ function List(props){
                     {listItems}
                 </ol>
 
-
         </>);
 
     }
