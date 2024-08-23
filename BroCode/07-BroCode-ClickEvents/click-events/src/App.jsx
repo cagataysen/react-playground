@@ -2,7 +2,8 @@
 //               We can respond to clicks by passing
 //               a callback to the onClick event handler.
 
-import Button from "./Button";
+import Button from "./Button.jsx";
+import Button2 from "./Button2.jsx";
 
 function App() {
 
@@ -10,6 +11,9 @@ function App() {
   return (
     <>
         <Button />
+
+        <Button2 />
+
     </>
   );
 }
