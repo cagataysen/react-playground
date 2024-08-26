@@ -1,123 +1,139 @@
-# react-components
-In this repo, I am adding the components which I am learning in ReactJS and putting some extra informations related to fundamentals and basic level of React framework including setup and ES6 features.
-hooks to add and work on it.
-Engin demirog kurslar: </br>
-java & react: https://www.youtube.com/playlist?list=PLqG356ExoxZUuVYKLuiQLnref7Y4ims87 
-</br>
-react, redux, hooks: https://www.youtube.com/playlist?list=PLqG356ExoxZXEW9h1uTWCwqLLTJ_bO5Be 
-</br>
-</br>
-</br>
+---
+# React Components
 
+In this repository, I am adding components that I am learning in ReactJS and providing extra information related to fundamentals and the basics of the React framework, including setup instructions and ES6 features. Additionally, I plan to add more hooks and explore working with them.
+Since I do not have commercial experience working with React as a frontend developer, this repository might contain some incorrect approaches or suboptimal practices.
+---
 
 # Setting Up
 
-React Native App kurmak için; bu komutu VSCode’da terminal açıp yazıyoruz.
+To set up a React Native app, open the terminal in VSCode and type the following command:
 
-```jsx
-
-npm install -g create react app
+```bash
+npm install -g create-react-app
 ```
 
-Gerekli indirmeler yapılıyor.
-React projesi oluşturmak için ise çalışmak istediğimiz dizine gelip terminale
+This command installs the necessary dependencies globally.  
+To create a new React project, navigate to the directory where you want to work, then run:
 
-```jsx
-
-npx create-react-app dosyaadi
+```bash
+npx create-react-app project-name
 ```
 
-Yazıyoruz ve app o lokasyonda oluşturulmaya başlanıyor. Ben bu dosyaadi kısmına intro
-diyerek başladım.
-Ardından işlem tamamlanınca oluşan dosyanın adı “intro” oluyor. En son Happy Hacking!
-Diyor.
+For instance, if you want to name the project `intro`, simply replace `project-name` with `intro`. After the process completes, the project will be created in a folder called "intro". The final message will be “Happy Hacking!”
 
-Outputta da gösterildiği gibi sırasıyla,
+As shown in the output, navigate into your project directory and start the project with the following commands:
 
-```jsx
+```bash
 cd intro
 ```
 
-```jsx
+```bash
 npm start
 ```
 
-yazdığımızda terminale dosyamıza giriyoruz ve npm start ile bu intro klasöründeki projeyi
-node üzerinde çalıştır demek.
-Npm start ile birlikte localhost:3000 de proje başlıyor.
-Diyelimki projeyi kapatık, tekrar VSCode u açtık, projeyi başlatmak için terminale yine npm
-start yazmamız gerekiyor.
+These commands will enter your project folder and start the React project on Node.js. The project will run on `localhost:3000`.
 
-## Component Yapısı:
+If you close the project and later reopen it in VSCode, you will need to start the project again by typing:
 
-Yeni component oluşturmak için, öncelikle source kısmında yeni bir dosya yaratıyoruz
-manuel olarak, .js uzantısıyla. Sonra o dosyayı açıp rcc yazıp enter a basınca otomatik olarak
-bir oop yapısı oluşuyor. Bu yapıyı ana dosyamız olan App.js dosyamıza eklememiz gerekiyor.
-
-```jsx
-import Navi from './Navi';
+```bash
+npm start
 ```
 
-şeklinde.
+---
 
-Eğer
+## Alternative Setup with Vite (I am using this one)\*
 
-```jsx
-<Navi/>
+If you prefer a faster and more optimized setup, you can use Vite instead of Create React App. Vite is a modern build tool that provides a much faster development experience.
+
+To create a new React project using Vite, run the following commands:
+
+```bash
+npm create vite@latest
 ```
 
-Yazarsak JSX formatında otomatik olarak ekleyebiliyor da ama sen yine de kontrol et.
+You’ll be prompted to choose a project name and a framework (select `React`). After that, navigate into your project and install dependencies:
+
+```bash
+cd project-name
+npm install
+npm run dev
+```
+
+This will start your project locally, and you can access it at `localhost:5173`.
+
+---
+
+## Component Structure:
+
+To create a new component, first manually create a new `.js` file inside the `src` folder. Open the file and type `rcc`, then press enter. This shortcut will automatically generate a class-based component structure for you. Next, you need to import this component into your main file, `App.js`.
+
+For example:
 
 ```jsx
+import Navi from "./Navi";
+```
 
+Then, you can use this component in JSX format like so:
+
+```jsx
+<Navi />
+```
+
+The component should be automatically imported, but double-check to make sure it works.
+
+To style components, you will need some CSS knowledge. If you’re not familiar with CSS, you can install Reactstrap, which provides pre-built Bootstrap components for React.
+
+To install Reactstrap, run:
+
+```bash
 npm install reactstrap
 ```
 
-Bu kısımda component yapısı için CSS bilmek gerekiyor ama biz hakim olmadığımız için
+You can also manually add dependencies to `package.json`, but using the above command automatically installs the latest version. The installed packages will be placed in the `node_modules` folder.
 
-reactstrap kuruyoruz sistemimize.
-
-Package.json kısmında dependincies kısmına manuel olarak yazıp da eklenebiliyor, ama bu
-kodu yazarak otomatik olarak son version iniyor.
-
-Bu paketler de node_modules altına kuruluyor.
-
-import "bootstrap/dist/css/bootstrap.min.css"
-
-kodunu index.js e ekledim, eğer ekleyeceğimizin karşılığı reactstrapte yokssa bootsrapten
-bakalım diye.
-
-Ayrıca
+You’ll need to import Bootstrap’s CSS in your `index.js` file:
 
 ```jsx
-npm install boostrap
+import "bootstrap/dist/css/bootstrap.min.css";
 ```
 
-yazarak boostrap i de yükleyelim. Sıkıştığımız yerde onu kullanırız.
+This ensures that if a component style is not found in Reactstrap, we can use Bootstrap directly.
 
-## Projeyi durdurup tekrar başlatmak:
+Additionally, you can install Bootstrap itself:
 
-> Node terminaline gelip, **ctrl C** yaparak durdurdum yayını ve
-> 
+```bash
+npm install bootstrap
+```
 
-```jsx
+We can use Bootstrap directly in case we face any styling challenges.
+
+## Stopping and Restarting the Project:
+
+To stop the running project, go to the terminal and press **Ctrl + C**. To restart it, simply type:
+
+```bash
 npm start
 ```
 
-yazarak tekrar başlattım.
+When writing new JS components, make sure to export them at the end. Otherwise, you may encounter import errors in `App.js`.
 
-Yeni bir JS componenti yazdığında function sonuna eklemezsen App.js de import ederken hata verebilir.
+For example:
 
 ```jsx
-*function Timer() {
+function Timer() {
   return <div>Timer</div>;
 }
-export default Timer;*
+
+export default Timer;
 ```
+
+Then, in `App.js`:
 
 ```jsx
 import "./App.css";
 import Timer from "./Timer";
+
 function App() {
   return (
     <main>
@@ -125,5 +141,6 @@ function App() {
     </main>
   );
 }
+
 export default App;
 ```
