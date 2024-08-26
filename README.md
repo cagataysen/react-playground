@@ -1,9 +1,6 @@
----
 # React Components
 
-In this repository, I am adding components that I am learning in ReactJS and providing extra information related to fundamentals and the basics of the React framework, including setup instructions and ES6 features. Additionally, I plan to add more hooks and explore working with them.
-Since I do not have commercial experience working with React as a frontend developer, this repository might contain some incorrect approaches or suboptimal practices.
----
+In this repository, I am documenting the ReactJS components and features I am learning, along with providing supplementary information on fundamental concepts and basic usage of the React framework. This includes setup instructions and ES6 features. Additionally, I plan to incorporate more hooks and explore their usage. Please note that, as I do not have commercial experience with React as a frontend developer, this repository might contain some unconventional approaches or suboptimal practices.
 
 # Setting Up
 
