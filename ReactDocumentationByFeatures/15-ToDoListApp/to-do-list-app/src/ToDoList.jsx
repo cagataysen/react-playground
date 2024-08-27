@@ -8,7 +8,7 @@ function ToDoList() {
   ]);
   const [newTask, setNewTask] = useState("");
 
-  function handeInputChange(event) {
+  function handleInputChange(event) {
     setNewTask(event.target.value);
   }
 
@@ -57,7 +57,7 @@ function ToDoList() {
           type="text"
           placeholder="Enter a task..."
           value={newTask}
-          onChange={handeInputChange}
+          onChange={handleInputChange}
         />
         <button className="add-button" onClick={addTask}>
           Add
