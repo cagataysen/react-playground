@@ -1,0 +1,24 @@
+.count-text{
+    margin-left: 90px;
+}
+
+button{
+    margin: 5px;
+}
+
+.counter-component{
+    border: 2px solid;
+    margin-right: 200px;
+    margin-left: 2px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.to-do-list-component{
+    margin-top: 10px;
+    border: 2px solid;
+    margin-right: 200px;
+    margin-left: 2px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
