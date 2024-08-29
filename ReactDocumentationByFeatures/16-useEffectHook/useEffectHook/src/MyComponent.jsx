@@ -5,6 +5,9 @@
 
 
     useEffect(function, [dependencies])
+    
+    The function part above is: the function part contains the code we would like to perform
+    dependendencies part is : optionally an array of dependencies. (When this part will change, apply the function)
 
 
     1. useEffect(() => {})              // Runs after every re-render
